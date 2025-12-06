@@ -2,24 +2,31 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="APIRESTFULL.Views.PageCreatePerson"
-             Title="PageCreatePerson">
-    <VerticalStackLayout>
-        
-        <Image x:Name="foto" WidthRequest="50" HeightRequest="200" BackgroundColor="AliceBlue" />
+             Title="Gestión de Personas">
 
-        <Button x:Name="btnfoto" Text="Capturar imagen" Clicked="btnfoto_Clicked" />
+    <VerticalStackLayout Padding="20" Spacing="10">
 
+        <!-- Vista previa de foto -->
+        <Image x:Name="foto" WidthRequest="150" HeightRequest="200" BackgroundColor="AliceBlue" />
+
+        <!-- Controles de foto -->
+        <HorizontalStackLayout Spacing="10">
+            <Button x:Name="btnfoto" Text="Capturar imagen" Clicked="btnfoto_Clicked" IsEnabled="True" />
+            <Button x:Name="btnagregar" Text="Agregar foto" Clicked="btnagregar_Clicked" IsEnabled="True" />
+        </HorizontalStackLayout>
+
+        <!-- Campos de entrada -->
         <Entry x:Name="Nombres" Placeholder="Ingrese su nombre" />
-
         <Entry x:Name="Apellidos" Placeholder="Ingrese su apellido" />
-
         <Entry x:Name="Edad" Placeholder="Ingrese su edad" Keyboard="Numeric" />
+        <Entry x:Name="Telefono" Placeholder="Ingrese su teléfono" Keyboard="Telephone" />
+        <Entry x:Name="Direccion" Placeholder="Ingrese su dirección" Keyboard="Text" />
 
-        <Entry x:Name="Telefono" Placeholder="Ingrese su telefono" Keyboard="Telephone" />
-
-        <Entry x:Name="Direccion" Placeholder="Ingrese su Direccion" Keyboard="Text" />
-
-        <Button x:Name="btnproceso" Text="Guardar" Clicked="btnproceso_Clicked" />
+        <!-- Botones CRUD -->
+        <Button x:Name="btnproceso" Text="Guardar" Clicked="btnproceso_Clicked" BackgroundColor="LightGreen" IsEnabled="True" />
+        <Button x:Name="btnleer" Text="Leer Personas" Clicked="btnleer_Clicked" BackgroundColor="LightBlue" IsEnabled="True" />
+        <Button x:Name="btnupdate" Text="Actualizar Persona" Clicked="btnupdate_Clicked" BackgroundColor="Khaki" IsEnabled="True" />
+        <Button x:Name="btndelete" Text="Eliminar Persona" Clicked="btndelete_Clicked" BackgroundColor="Salmon" IsEnabled="True" />
 
     </VerticalStackLayout>
 </ContentPage>

@@ -8,7 +8,7 @@ namespace APIRESTFULL.Models
 {
     public class Msg
     {
-        public Boolean issuccess { get; set; }
+        public Boolean success { get; set; }
         public string message { get; set; } 
     }
 }
